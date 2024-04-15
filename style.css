@@ -6,6 +6,7 @@
   width: 27%;
   border: 1px solid #000;
   height: 360px;
+  min-width: 400px;
 }
 
 .display-area {
