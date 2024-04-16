@@ -9,4 +9,4 @@
 
 ## Preview
 
-![Home](https://i.imgur.com/vGaNCg5.png)
+![Home](https://i.imgur.com/5zXWYCu.png)
