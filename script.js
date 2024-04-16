@@ -3,6 +3,7 @@ let inputExpression = "";
 let mathExpression = "";
 let expLength = 15;
 let size = 25;
+let ans = 0;
 
 // Display
 let displayArea = document.getElementById("display_area");
@@ -58,17 +59,24 @@ function clearExpression(exp) {
   mathExpression = exp;
   expLength = 15;
   size = 25;
+  ans = 0;
   displayArea.style.fontSize = 45 + "px";
   showExpression();
 }
 
 function solveExpression() {
-  let ans;
-  try {
-    ans = eval(mathExpression);
-  } catch (e) {
-    ans = "Syntaxt error";
+  if (mathExpression === "") {
+    ans = "0";
+  } else {
+    try {
+      ans = eval(mathExpression);
+    } catch (e) {
+      ans = "Syntaxt error";
+    }
+    mathExpression = ans.toString();
+    inputExpression = ans.toString();
   }
+  displayArea.style.fontSize = 45 + "px";
   displayArea.innerHTML = ans;
 }
 
